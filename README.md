@@ -1,4 +1,10 @@
-# LaTeX DFG template 
+# LaTeX ANR-DFG template 
+
+Adapted from the DFG template by https://github.com/hoelzer/dfg
+
+Original RTF can be found in the rtf folder.
+
+The call for grant is https://www.dfg.de/en/research-funding/funding-opportunities/countries-regions/fr-anr-nle
 
 A LaTeX template for a basic DFG (Deutsche Forschungsgemeinschaft, German Research Foundation) grant proposal. __Attention__: you need ``pdflatex`` and ``biber`` (not ``bibtex``) to compile the document. **Last updated according to the DFG original template listed in the header of the compiled PDF file (or in the `*.tex` files). Please check and open an issue if there are any updates to the original template not reflected here!**
 

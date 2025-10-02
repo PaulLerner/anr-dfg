@@ -133,7 +133,7 @@
 \DeclareOption{english}{
     \sisetup{locale=US}
     \AtBeginDocument{\selectlanguage{english}}
-	\renewcommand{\pagemark}{page \thepage~of \lastpageref{pagesLTS.\pagenumtype}}
+	\renewcommand{\pagemark}{page \thepage~of max. 17}
     \renewcommand{\total}{Total}
 }
 \ExecuteOptions{german}
@@ -144,8 +144,10 @@
 
 \newcommand{\backmatter}{
     \clearpage
-    \pagenumbering{Roman}
-    \renewcommand{\pagenumtype}{Roman}
+    \pagenumbering{arabic}
+    \renewcommand{\pagenumtype}{arabic}
+    \renewcommand{\total}{Total}
+	\renewcommand{\pagemark}{page \thepage~of max. 8}
 }
 
 
