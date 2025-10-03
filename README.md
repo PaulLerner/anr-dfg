@@ -1,3 +1,8 @@
+[![Open in Overleaf][#overleaf-badge]][#github-repo-zip]
+
+[#overleaf-badge]: https://tinyurl.com/overleaf-badge
+[#github-repo-zip]: https://www.overleaf.com/docs?snip_uri=https://github.com/PaulLerner/anr-dfg/archive/refs/heads/main.zip
+
 # LaTeX ANR-DFG template 
 
 Adapted from the DFG template by https://github.com/hoelzer/dfg
@@ -8,44 +13,17 @@ The call for grant is https://www.dfg.de/en/research-funding/funding-opportuniti
 
 A LaTeX template for a basic DFG (Deutsche Forschungsgemeinschaft, German Research Foundation) grant proposal. __Attention__: you need ``pdflatex`` and ``biber`` (not ``bibtex``) to compile the document. **Last updated according to the DFG original template listed in the header of the compiled PDF file (or in the `*.tex` files). Please check and open an issue if there are any updates to the original template not reflected here!**
 
-## Acknowledgements
-
-This template is based on the template of the [Measurement Engineering Group](https://github.com/emtpb/proposal_dfg) and mimicks the RTF template and PDF guidelines provided by [DFG with a focus on a "Sachbeihilfe" grant](https://www.dfg.de/foerderung/programme/einzelfoerderung/sachbeihilfe/formulare_merkblaetter/index.jsp). 
-
-Thanks [@FPK](https://github.com/FPK) for suggesting and adding the [cleveref package](https://www.namsu.de/Extra/pakete/Cleveref.html). Check the [manual](https://www.namsu.de/Extra/pakete/Cleveref.html) and use `\cref{}` instead of the default `\ref` for referencing your figures, tables, etc. General changes regarding lables can be done in the `Header.tex`. Also thanks for further customization fixes (typos, german translation, nicer font for numbers). 
-
-Thanks [@nneuss](https://github.com/nneuss) a German version is also available. Please use `dfg-german.tex` instead of `dfg.tex` for the German version.
-
-Thanks [@dl1chb](https://github.com/dl1chb) for better ToDo handling via the [todonotes package](https://www.ctan.org/pkg/todonotes) and updates of the template.
-
-Thanks [@mank4](https://github.com/mank4) for the implementation of a gantt chart and better handling of subsections for work packages.
-
-Thanks [@klb2](https://github.com/klb2/dfg-proposal-template) for the implementation of consecutive section numbers for 1.2.1 and 1.2.2. *Deprecated* since DFG template version 54.01 09/22 where references are only listed in Section 3. 
-
-Thanks [@gituser789](https://github.com/gituser789) for the implementation of an own literature feature with separate numbering. 
-
-Thanks [@kss-lea](https://github.com/kss-lea) for adding separate numbering formats for the first and second (supplement) part. 
-
-Thanks [@klb2](https://github.com/klb2), [@FPK](https://github.com/FPK), and [@wallscheid](https://github.com/wallscheid) for updates to the new `DFG-form 53.01 - 03/24` version.
-
-Thanks [@nise](https://github.com/nise) and [@ThiloKr](https://github.com/ThiloKr) for the [suggested changes to make author publications bold](https://github.com/hoelzer/dfg/issues/47) and [@shervinsafavi](https://github.com/shervinsafavi) for the PR implementing them.
-
-Thanks [@wallscheid](https://github.com/wallscheid) for adding an english CV [according to 53.200 – 03/23 DFG form](https://www.dfg.de/de/formulare-53-200-elan-246806). Please note that this CV needs to be additionally compiled via `pdflatex` if you want to use it.
-
-Thanks [@jkneifl](https://github.com/jkneifl) for the information about listing all authors in references and not using _et al._ and the corresponding PR. 
-
-Thanks [@claell](https://github.com/claell) for several issues that helped improving and updating the code. 
-
-_Please let me know if I accidentally forgot a contribution! Thanks all contributors!_
-
-## Successful applications with the template
-
-If you use this template and receive confirmation, please let me know so that I can mention your successful application here!
-
-* Prof. Dr. Maximilian E. Schüle ([@MaxEmanuel](https://github.com/MaxEmanuel)), "Functions Become Data: Higher-Order Lambda Functions for Database Systems" (2025)
-* Prof. Dr. Maximilian E. Schüle ([@MaxEmanuel](https://github.com/MaxEmanuel)), "Buffers with Benefits: Elastic Memory Hierarchies for Memory-Intensive Applications" (2025)
 
 ## Compilation
+Works with [Overleaf](https://www.overleaf.com/docs?snip_uri=https://github.com/PaulLerner/anr-dfg/archive/refs/heads/main.zip)
+
+
+
+```bash
+latexmk -pdf dfg.tex
+```
+
+or
 
 ```bash
 pdflatex
@@ -90,6 +68,44 @@ docker run --rm -v $PWD:$PWD -w $PWD $DOCKER pdflatex dfg.tex
 docker run --rm -v $PWD:$PWD -w $PWD $DOCKER biber dfg
 ...
 ```
+
+## Acknowledgements
+
+This template is based on the template of the [Measurement Engineering Group](https://github.com/emtpb/proposal_dfg) and mimicks the RTF template and PDF guidelines provided by [DFG with a focus on a "Sachbeihilfe" grant](https://www.dfg.de/foerderung/programme/einzelfoerderung/sachbeihilfe/formulare_merkblaetter/index.jsp). 
+
+Thanks [@FPK](https://github.com/FPK) for suggesting and adding the [cleveref package](https://www.namsu.de/Extra/pakete/Cleveref.html). Check the [manual](https://www.namsu.de/Extra/pakete/Cleveref.html) and use `\cref{}` instead of the default `\ref` for referencing your figures, tables, etc. General changes regarding lables can be done in the `Header.tex`. Also thanks for further customization fixes (typos, german translation, nicer font for numbers). 
+
+Thanks [@nneuss](https://github.com/nneuss) a German version is also available. Please use `dfg-german.tex` instead of `dfg.tex` for the German version.
+
+Thanks [@dl1chb](https://github.com/dl1chb) for better ToDo handling via the [todonotes package](https://www.ctan.org/pkg/todonotes) and updates of the template.
+
+Thanks [@mank4](https://github.com/mank4) for the implementation of a gantt chart and better handling of subsections for work packages.
+
+Thanks [@klb2](https://github.com/klb2/dfg-proposal-template) for the implementation of consecutive section numbers for 1.2.1 and 1.2.2. *Deprecated* since DFG template version 54.01 09/22 where references are only listed in Section 3. 
+
+Thanks [@gituser789](https://github.com/gituser789) for the implementation of an own literature feature with separate numbering. 
+
+Thanks [@kss-lea](https://github.com/kss-lea) for adding separate numbering formats for the first and second (supplement) part. 
+
+Thanks [@klb2](https://github.com/klb2), [@FPK](https://github.com/FPK), and [@wallscheid](https://github.com/wallscheid) for updates to the new `DFG-form 53.01 - 03/24` version.
+
+Thanks [@nise](https://github.com/nise) and [@ThiloKr](https://github.com/ThiloKr) for the [suggested changes to make author publications bold](https://github.com/hoelzer/dfg/issues/47) and [@shervinsafavi](https://github.com/shervinsafavi) for the PR implementing them.
+
+Thanks [@wallscheid](https://github.com/wallscheid) for adding an english CV [according to 53.200 – 03/23 DFG form](https://www.dfg.de/de/formulare-53-200-elan-246806). Please note that this CV needs to be additionally compiled via `pdflatex` if you want to use it.
+
+Thanks [@jkneifl](https://github.com/jkneifl) for the information about listing all authors in references and not using _et al._ and the corresponding PR. 
+
+Thanks [@claell](https://github.com/claell) for several issues that helped improving and updating the code. 
+
+_Please let me know if I accidentally forgot a contribution! Thanks all contributors!_
+
+## Successful applications with the template
+
+If you use this template and receive confirmation, please let me know so that I can mention your successful application here!
+
+* Prof. Dr. Maximilian E. Schüle ([@MaxEmanuel](https://github.com/MaxEmanuel)), "Functions Become Data: Higher-Order Lambda Functions for Database Systems" (2025)
+* Prof. Dr. Maximilian E. Schüle ([@MaxEmanuel](https://github.com/MaxEmanuel)), "Buffers with Benefits: Elastic Memory Hierarchies for Memory-Intensive Applications" (2025)
+
 
 ## Optional content
 
